@@ -1,0 +1,16 @@
+BoundedContext LinkSentinelContext {
+  Aggregate LinkVerification {
+    Entity Link {
+      url: String
+      status: LinkStatus
+      verificationDate: DateTime
+    }
+    Enum LinkStatus {
+      SEGURO, SUSPEITO
+    }
+    Service LinkVerificationService {
+      verifyLink(url: String): LinkStatus
+      getHistory(userId: String): List<Link>
+    }
+  }
+}
