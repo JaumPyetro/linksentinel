@@ -14,3 +14,7 @@ BoundedContext LinkSentinelContext {
     }
   }
 }
+
+ContextMap {
+  contains LinkSentinelContext
+}
