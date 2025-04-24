@@ -1,20 +1,48 @@
-BoundedContext LinkSentinelContext {
+BoundedContext UsuarioContext {
+  Aggregate Usuario {
+    Entity Usuario {
+      id: UUID
+      nome: String
+      email: String
+      senha: String
+      dataCadastro: DateTime
+    }
+    Repository UsuarioRepository {
+      findByEmail(email: String): Usuario
+      save(usuario: Usuario): void
+    }
+    Service UsuarioService {
+      cadastrarUsuario(nome: String, email: String, senha: String): Usuario
+      autenticarUsuario(email: String, senha: String): Usuario
+    }
+  }
+}
+
+BoundedContext LinkVerificationContext {
   Aggregate LinkVerification {
     Entity Link {
+      id: UUID
       url: String
       status: LinkStatus
-      verificationDate: DateTime
+      dataVerificacao: DateTime
+      usuarioId: UUID
     }
     Enum LinkStatus {
       SEGURO, SUSPEITO
     }
+    Repository LinkRepository {
+      findByUsuarioId(usuarioId: UUID): List<Link>
+      save(link: Link): void
+    }
     Service LinkVerificationService {
-      verifyLink(url: String): LinkStatus
-      getHistory(userId: String): List<Link>
+      verificarLink(url: String, usuarioId: UUID): LinkStatus
+      consultarHistorico(usuarioId: UUID): List<Link>
     }
   }
 }
 
 ContextMap {
-  contains LinkSentinelContext
+  contains UsuarioContext
+  contains LinkVerificationContext
+  UsuarioContext [CORE_DOMAIN] -> LinkVerificationContext [SUPPORTING_DOMAIN]
 }
