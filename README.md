@@ -1,89 +1,76 @@
-# LinkSentinel
-
-Sistema web para verificação de links suspeitos, desenvolvido para a disciplina de Engenharia de Software.
+#LinkSentinel
+LinkSentinel é um sistema web desenvolvido para a disciplina de Engenharia de Software, com o objetivo de verificar links suspeitos e auxiliar na prevenção contra golpes, phishing e outras ameaças digitais.
 
 ---
 
-## 📋 Descrição
+🔍 Funcionalidades
+Cadastro e autenticação de usuários
 
-O **LinkSentinel** permite que usuários:
-- Cadastrem-se e façam login
-- Verifiquem se um link é seguro ou suspeito
-- Consultem o histórico de links já verificados
+Verificação de links para determinar se são seguros ou suspeitos
+
+Consulta ao histórico de links verificados
 
 O objetivo é ajudar pessoas a se protegerem de golpes, phishing e links maliciosos, promovendo a segurança digital.
 
 ---
 
 ## 🗂️ Estrutura do Repositório
-
-/docs
-descricao-dominio.md
-mapa-historias.md
-prototipos.md
-modelo.cml
-cenarios-bdd.feature
-ddd-niveis.md
-arquitetura-limpa.md
-diagrama-uml-context-mapper.png
-/src
-test
-java
-br/com/linksentinel/steps/LinkSteps.java
-resources
-features/cenarios-bdd.feature
+linksentinel/
+├── docs/
+│   ├── arquitetura-limpa.md
+│   ├── cenarios-bdd.feature
+│   ├── descricao-dominio.md
+│   ├── ddd-niveis.md
+│   ├── diagrama-uml-context-mapper.png
+│   ├── mapa-historias.md
+│   ├── modelo.cml
+│   └── prototipos.md
+├── src/
+│   └── test/
+│       └── java/
+│           └── br/
+│               └── com/
+│                   └── linksentinel/
+│                       └── steps/
+│                           └── LinkSteps.java
+│       └── resources/
+│           └── features/
+│               └── cenarios-bdd.feature
+└── README.md
 
 
 ---
+🧪 Executando os Testes BDD
+Clone o repositório:
+git clone https://github.com/JaumPyetro/linksentinel.git
+cd linksentinel
+Instale as dependências do projeto utilizando Maven ou Gradle.​
 
-## 🖼️ Diagrama UML
+Execute os testes:
+# Com Maven
+mvn test
 
+# Com Gradle
+./gradlew test
+
+🧭 Diagrama UML
 O diagrama UML do modelo especificado no Context Mapper está disponível em:
-
-- [`/docs/diagrama-uml-context-mapper.png`](docs/diagrama-uml-context-mapper.png)
-
----
-
-## 🚀 Como rodar os testes BDD
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/JaumPyetro/linksentinel.git
-   cd linksentinel
-2. Instale as dependências do projeto (Maven ou Gradle).
-
-3. Execute os testes:
-
-   Com Maven:
-
-    mvn test
-
-  Com Gradle:
-
-   gradle test
-
-4. Os testes BDD estão em:
-   
-  src/test/resources/features/cenarios-bdd.feature
-
+docs/diagrama-uml-context-mapper.png
 
 📄 Documentação
-  Todos os artefatos da primeira entrega estão na pasta /docs:
-
+A documentação completa do projeto está localizada na pasta docs/, incluindo:​
 Descrição do domínio
-  Mapa de histórias do usuário
-  Protótipos de baixa fidelidade
-  Modelo CML dos subdomínios
-  Cenários BDD
-  Níveis do DDD
-  Arquitetura limpa
-  Diagrama UML
+Mapeamento de histórias de usuário
+Protótipos de interface
+Modelo CML
+Cenários BDD
+Arquitetura limpa
+Níveis de DDD​
 
 👥 Integrantes
-  João Pedro
-  Tiago
+  João Pedro Nóbrega
+  Tiago Emilio
 
 
 📎 Observações
   O projeto está em desenvolvimento e será expandido nas próximas entregas.
-  
