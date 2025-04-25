@@ -13,33 +13,6 @@ Consulta ao histórico de links verificados
 O objetivo é ajudar pessoas a se protegerem de golpes, phishing e links maliciosos, promovendo a segurança digital.
 
 ---
-
-## 🗂️ Estrutura do Repositório
-linksentinel/
-├── docs/
-│   ├── arquitetura-limpa.md
-│   ├── cenarios-bdd.feature
-│   ├── descricao-dominio.md
-│   ├── ddd-niveis.md
-│   ├── diagrama-uml-context-mapper.png
-│   ├── mapa-historias.md
-│   ├── modelo.cml
-│   └── prototipos.md
-├── src/
-│   └── test/
-│       └── java/
-│           └── br/
-│               └── com/
-│                   └── linksentinel/
-│                       └── steps/
-│                           └── LinkSteps.java
-│       └── resources/
-│           └── features/
-│               └── cenarios-bdd.feature
-└── README.md
-
-
----
 🧪 Executando os Testes BDD
 Clone o repositório:
 git clone https://github.com/JaumPyetro/linksentinel.git
